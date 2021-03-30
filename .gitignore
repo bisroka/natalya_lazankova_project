@@ -1,5 +1,5 @@
 node_modules/
-/dist
-/public
+dist/
+public/
 .cache/
 .DS_STORE
