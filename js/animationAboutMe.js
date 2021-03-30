@@ -2,7 +2,6 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export const animationAboutMe = () => {
-  console.log('dziala')
   gsap.registerPlugin(ScrollTrigger);
   const aboutMeTimeLine = gsap.timeline({
     scrollTrigger: {
