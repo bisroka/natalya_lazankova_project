@@ -78,23 +78,39 @@ main{
         .aboutme__img{
             position: absolute;
             display: block;
-            width: 70%;
+            width: 50%;
+            // max-width: 200px;
+            @media (min-width: 1024px) {
+                width: 70%;
+            }
       
         }
         .aboutme__img:nth-child(1){
             top: 30%;
-            left: 45%;
+            left: 50%;
             transform: rotate(10deg);
+            @media (min-width: 1024px) {
+                left: 45%;
+            }
         }
         .aboutme__img:nth-child(2){
-            top: -25%;
-            left: 40%;
+            top: -15%;
+            left: 45%;
             transform: rotate(-10deg);
+            @media (min-width: 1024px) {
+                top: -25%;
+                left: 40%;
+            }
         }
         .aboutme__img:nth-child(3){
             top:0;
-            left:-30%;
-            width: 85%;
+            left:0%;
+            width: 70%;
+            @media (min-width: 1024px) {
+                top:0;
+                left:-30%;
+                width: 85%;
+            }
         }
     }
     }
