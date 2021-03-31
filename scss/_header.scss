@@ -1,0 +1,84 @@
+.header{
+    overflow-x: hidden;
+    background-image: url('../assets/background/abstract-1081281_1280.jpg');
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    color: #ffffff;
+    font-family: Impact;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 5px;
+    grid-template-areas: 
+    ". title title title title title title title title . . ."
+    ". title title title title title title title title . . ."
+    ". title title title title title title title title . . ."
+    ". subtitle subtitle subtitle subtitle subtitle image image image image image image"
+    ". subtitle subtitle subtitle subtitle subtitle image image image image image image"
+    ". cta cta cta cta cta image image image image image image"
+    ". . . . . . . . . . . .";
+    @media (min-width: 768px){
+        grid-template-areas: 
+        ". title title title title title . . . . . ."
+        ". title title title title title . . . . . ."
+        ". title title title title title  image image image image image image"
+        ". subtitle subtitle subtitle subtitle subtitle image image image image image image"
+        ". subtitle subtitle subtitle subtitle subtitle image image image image image image"
+        ". cta cta cta cta cta image image image image image image"
+        ". . . . . . . . . . . .";
+    }
+    @media (min-width: 1024px){
+        grid-template-areas: 
+        ". title title title title title image image image image image image"
+        ". title title title title title image image image image image image"
+        ". title title title title title  image image image image image image"
+        ". title title title title title  image image image image image image"
+        ". subtitle subtitle subtitle subtitle subtitle image image image image image image"
+        ". cta cta cta . . image image image image image image"
+        ". cta cta cta . . image image image image image image";
+    }
+    &__title {
+        grid-area: title;
+        align-self: center;
+        background: transparent;
+        font-size: 4rem;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+    &__subtitle{
+        font-size: 2rem;
+        z-index: 1;
+        grid-area: subtitle;
+    }
+    &__cta{
+        grid-area: cta;
+        display: block;
+        justify-self: center;
+        align-self: center;
+        width: 7rem;
+        background-color: #DADADA;
+        color: #181818;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        text-align: center;
+        box-shadow: 0 0 40px #DADADA88 ;
+        cursor: pointer;
+        @media (min-width: 768px){
+            width: 10rem;
+            padding: 1rem 2rem;
+        }
+    }
+    
+    &__img{
+        height: 100%;
+        z-index: 0;
+        grid-area: image;
+        align-self: center;
+        @media (min-width: 1024px){
+            position: absolute;
+            left: 20%;
+            height: 90%;
+        }
+    }
+}

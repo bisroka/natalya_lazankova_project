@@ -1,0 +1,128 @@
+main{
+    overflow-x: hidden;
+    max-width: 1400px;
+    margin: 5rem auto 0;
+    padding: 4rem 0;
+    .gallery{
+        position: relative;
+        font-family: Impact;
+        color: #f1f1f1;
+        opacity: 0.8;
+        &__title{
+            text-transform: uppercase;
+            font-size: 5rem;
+            position: absolute;
+            z-index: 2;
+            top: -10%;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+        article{
+            position: relative;
+          
+            .article__title{
+                position: absolute;
+                font-size: 3rem;
+                z-index: 2;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @media (min-width: 768px){
+                    font-size: 4rem;
+                }
+            }
+         
+        }
+        article:not(:first-of-type){
+            margin: 5em 0;
+        }
+    }
+    .aboutme{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #f1f1f1;
+    &__title{
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: Impact;
+        @media (min-width: 768px){
+            font-size: 3rem;
+        }
+    }
+    &__article{
+        display: flex;
+        flex-direction: column;
+        margin: 2em 0;
+        place-items: center;
+    }
+    &__article:nth-child(even){
+        flex-direction: column-reverse;
+    }
+    &__description{
+        margin: 1em 1em;
+        font-family: Geneva;
+        max-width: 400px;
+    }
+    &__img{
+        width: clamp(250px, 50vw, 500px);
+        box-shadow: 0px 0px 15px #181818;
+        border-radius: 5px;
+    }
+    &__img--container{
+        position: relative;
+        display: block;
+        height: 50vh;
+        width: 100%;
+        .aboutme__img{
+            position: absolute;
+            display: block;
+            width: 70%;
+      
+        }
+        .aboutme__img:nth-child(1){
+            top: 30%;
+            left: 45%;
+            transform: rotate(10deg);
+        }
+        .aboutme__img:nth-child(2){
+            top: -25%;
+            left: 40%;
+            transform: rotate(-10deg);
+        }
+        .aboutme__img:nth-child(3){
+            top:0;
+            left:-30%;
+            width: 85%;
+        }
+    }
+    }
+    .contact{
+        margin: 4em 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color:#f1f1f1;
+        &__title{
+            text-transform: uppercase;
+            font-family: Impact;
+            font-size: 2.5rem;
+            @media (min-width: 768px){
+                font-size: 3rem;
+            }
+        }
+        &__medias{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin:1em;
+        }
+        p{
+            font-family: Geneva;
+            margin: 1em;
+            max-width: 500px;
+            text-align: center;
+        }
+    }   
+}
